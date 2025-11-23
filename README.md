@@ -7,6 +7,8 @@ This template is based on the following packages / Il se base sur les package su
 - [fontawesome](https://typst.app/universe/package/fontawesome/)
 - [itemize](https://typst.app/universe/package/itemize/)
 
+![A4 example](/res/a4.png)
+![A4 landscape example](/res/landscape.png)
 
 ## Requirements
 

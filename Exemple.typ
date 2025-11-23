@@ -121,10 +121,10 @@ $ v := vec(x_1, x_2, x_3) $
 
 Vous pouvez également citer cette image avec @image_label
 
-#image("NixOS_KDE.png", width: 10%)
+#image("res/NixOS_KDE.png", width: 10%)
 
 #figure(
-  image("NixOS_KDE.png", width: 90%),
+  image("res/NixOS_KDE.png", width: 90%),
   caption: [ Ceci est une caption ],
 ) <image_label>
 
@@ -183,7 +183,7 @@ Ceci est une citation de document @texbook
   grid.cell(colspan: 1, lorem(2), fill: colors.red.rgb),
   grid.cell(
     colspan: 2,
-    image("NixOS_KDE.png", width: 100%),
+    image("res/NixOS_KDE.png", width: 100%),
   ),
   grid.cell(colspan: 3, lorem(25), fill: colors.lavender.rgb),
 )

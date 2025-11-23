@@ -155,6 +155,7 @@
 // - *page_paper* : The document paper format / Format de la page (A4, A3, ...)
 // - *landscape* : Boolean to choose a landscape format / Booléen pour choisir le format paysage ou portrait
 // - *margin* : Document margin / Marges du document
+// - *space_title* : Space between the header and the title / Espace entre l'en-tête et le titre
 // - *header_numbering* : Title format / Format des titres (exemples : "1.1.", "I)", "a.", "A)")
 // - *num_page* : Page numbering / Affichage des numéros de page (none ou "1")
 // - *nb_columns* : Column number / Nombre de colonnes pour le document
@@ -176,6 +177,7 @@
   page_paper: "a4",
   landscape: false,
   margin: (top: 1.5cm, bottom: 1.5cm, right: 1.5cm, left: 1.5cm),
+  space_title: 10%,
   header_numbering: none,
   num_page: none,                   
   nb_columns: 1,
@@ -189,7 +191,7 @@
   show_table_of_content: false,
   show_bib: false,
   show_header: true,
-  bib_file: "Bibliographie.bib",
+  bib_file: "Bibliography.bib",
   doc,
 ) = {
 
@@ -291,11 +293,11 @@
     {
 
       if show_table_of_content {
-        v(10%)
+        v(space_title)
         text(title, weight: "bold", size: 18pt)
       }
       else {
-        v(2%)
+        v(space_title)
         text(title, weight: "bold", size: 18pt)
         v(2%)
       }
@@ -306,7 +308,7 @@
   if show_table_of_content [
     #v(3%)
     #outline()
-    #v(3%)
+    #v(2%)
   ]
 
   doc

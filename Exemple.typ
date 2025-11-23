@@ -3,7 +3,7 @@
 
 #show: template.with(
   title: "Exemples",
-  school: "Structure or école",
+  school: "Structure or school",
   landscape: false,
   margin: (top: 1.5cm, bottom: 1.5cm, right: 1.5cm, left: 1.5cm),
   lang: "fr",                                    

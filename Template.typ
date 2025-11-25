@@ -162,10 +162,9 @@
 // - *column_space* : Column spacing / Espace entre les colonnes
 // - *lang* : Document language / Langue du fichier (exemples : "en" ou "fr")
 // - *font* : Document font / La police de votre document
-// - *font_math* : Math font / La police des blocs de math
 // - *font_code* : Code bloc font / La police des blocs de code
 // - *font_size* : Font size / Taille de la police dans le document
-// - *spacing* : Saping bewteen lines / Espacement entre les lignes
+// - *spacing* : Spacing between lines / Espacement entre les lignes
 // - *show_table_of_content* : Boolean to show the table of content / Booléen pour afficher ou non le sommaire
 // - *show_bib* : Boolean to show the biliography / Booléen pour afficher ou non la bibliographie
 // - *show_header* : Boolean to show the document header / Booléen pour afficher ou non le bandeau d'en-tête
@@ -184,7 +183,6 @@
   column_space: 20pt,
   lang: "fr",
   font: "Nunito",
-  font_math: "Nunito",
   font_code: "Cascadia Code",
   font_size: 10pt,
   spacing: 10pt,
@@ -277,7 +275,7 @@
   // Configuration des balises de math
   // 
   
-  show math.equation: set text(font: "Nunito")
+  //show math.equation: set text(font: "Nunito")
 
   //
   // Listings alignment with blocks / Pour les listings alignés correctement avec les blocs

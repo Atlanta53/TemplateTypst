@@ -36,7 +36,6 @@ To use this template, copy the `template.typ` file in your directory and simply 
   page_paper: "a4",
   lang: "fr",                      
   font: "Nunito",
-  font_math: "Nunito",
   font_code: "Cascadia Code",
   bib_file: "Bibliography.bib",
   ... Add your arg if needed / Rajoutez vos arguments ici au besoin
@@ -57,7 +56,6 @@ The current arguments you can add are the following / Les arguments possibles qu
 - *column_space* : Column spacing / Espace entre les colonnes
 - *lang* : Document language / Langue du fichier (exemples : "en" ou "fr")
 - *font* : Document font / La police de votre document
-- *font_math* : Math font / La police des blocs de math
 - *font_code* : Code bloc font / La police des blocs de code
 - *font_size* : Font size / Taille de la police dans le document
 - *spacing* : Spacing between lines / Espacement entre les lignes

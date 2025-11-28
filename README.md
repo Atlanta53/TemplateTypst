@@ -59,6 +59,7 @@ The current arguments you can add are the following / Les arguments possibles qu
 - *font_code* : Code bloc font / La police des blocs de code
 - *font_size* : Font size / Taille de la police dans le document
 - *spacing* : Spacing between lines / Espacement entre les lignes
+- *include_title_in_zone* : Boolean to include the title in its own zone / Booléen pour inclure le titre dans une zone à part
 - *show_table_of_content* : Boolean to show the table of contents / Booléen pour afficher ou non le sommaire
 - *show_bib* : Boolean to show the bibliography / Booléen pour afficher ou non la bibliographie
 - *show_header* : Boolean to show the document header / Booléen pour afficher ou non le bandeau d'en-tête

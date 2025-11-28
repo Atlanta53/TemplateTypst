@@ -165,6 +165,7 @@
 // - *font_code* : Code bloc font / La police des blocs de code
 // - *font_size* : Font size / Taille de la police dans le document
 // - *spacing* : Spacing between lines / Espacement entre les lignes
+// - *include_title_in_zone* : Boolean to include the title in its own zone / Booléen pour inclure le titre dans une zone à part
 // - *show_table_of_content* : Boolean to show the table of content / Booléen pour afficher ou non le sommaire
 // - *show_bib* : Boolean to show the biliography / Booléen pour afficher ou non la bibliographie
 // - *show_header* : Boolean to show the document header / Booléen pour afficher ou non le bandeau d'en-tête
@@ -186,6 +187,7 @@
   font_code: "Cascadia Code",
   font_size: 10pt,
   spacing: 10pt,
+  include_title_in_zone: true,
   show_table_of_content: false,
   show_bib: false,
   show_header: true,
@@ -283,25 +285,39 @@
   show: el.default-enum-list
 
 
-  place(
-    top + left,
-    float: true,
-    scope: "parent",
-    clearance: 2em,
-    {
+  if include_title_in_zone {
+    place(
+      top + left,
+      float: true,
+      scope: "parent",
+      clearance: 2em,
+      {
 
-      if show_table_of_content {
-        v(space_title)
-        text(title, weight: "bold", size: 18pt)
+        if show_table_of_content {
+          v(space_title)
+          text(title, weight: "bold", size: 18pt)
+        }
+        else {
+          v(space_title)
+          text(title, weight: "bold", size: 18pt)
+          v(2%)
+        }
+        
       }
-      else {
-        v(space_title)
-        text(title, weight: "bold", size: 18pt)
-        v(2%)
-      }
-      
+    )
+  } else {
+
+    if show_table_of_content {
+      v(space_title)
+      text(title, weight: "bold", size: 18pt)
     }
-  )
+    else {
+      v(space_title)
+      text(title, weight: "bold", size: 18pt)
+      v(2%)
+    }
+
+  }
   
   if show_table_of_content [
     #v(3%)

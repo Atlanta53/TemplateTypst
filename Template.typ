@@ -240,7 +240,7 @@
 
   //#set raw(theme: "latte.tmTheme")
   
-  show raw: set text(font: "Cascadia Code")
+  show raw: set text(font: font_code)
   show raw.where(block: true): set text(1em, fill: black)
   //show raw.where(block: false): it => highlight(it, fill: colors.base.rgb, radius: 1pt)
   show raw.where(block: false): it => highlight(fill: colors.base.rgb, extent: 1pt, radius: 1pt)[#text(it, fill: black)]

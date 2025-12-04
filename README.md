@@ -8,7 +8,7 @@ This template is based on the following packages / Il se base sur les packages s
 - [itemize](https://typst.app/universe/package/itemize/)
 
 ![A4 example](/res/a4.png)
-![A4 landscape example](/res/landscape.png)
+![A4 landscape example](/res/landscape_dark.png)
 
 ## Requirements
 
@@ -83,6 +83,7 @@ You can also switch to the Catppuccin Mocha theme with th following parameters /
 #let comment = comment.with(flavor: flavor)
 #let important = important.with(flavor: flavor)
 #let warning = warning.with(flavor: flavor)
+#let pill = pill.with(flavor: flavor)
 
 #show: template.with(
   ... Your args / Vos arguments,

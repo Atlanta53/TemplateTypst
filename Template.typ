@@ -136,18 +136,34 @@
 // Pill configuration / Configuration des pills
 //
 // Args :
+// - *flavor* : Catppuccin Flavor / Palette de couleur choisie pour Catppuccin
 // - *text_color* : Text color / Couleur du texte
 // - *fill_color* : Block background color / Couleur du bloc
 // - *show_icon* : Boolean to show the icon / Booléen pour afficher ou non l'icône
 // - *icon* : Icon label / Le label de l'icône sur font awesome
 // - *solid_icon* : Boolean to show the solid version of the icon / Booléen pour afficher la version "solide" de l'icône
 // 
-#let pill(text_color: get_color(flavor: "latte", color: "base"), fill_color: get_color(flavor: "latte", color: "blue"), show_icon: true, icon: "file-pdf", solid_icon: true, content) = "   " + box(
-  fill: fill_color,
-  outset: 4pt,
-  radius: 10pt,
-  if show_icon { fa-icon(icon, fill: text_color, size: 7pt, solid: solid_icon)} + " " + text(text_color, content, weight: "bold"),
-)
+
+#let pill(flavor: "latte", text_color: "black", fill_color: "crust", show_icon: true, icon: "file-pdf", solid_icon: false, content) = {
+
+  if flavor == "mocha" {
+    text_color = "black"
+  }
+
+  if flavor == "mocha" and fill_color == "crust" {
+    text_color = "text"
+  }
+
+  let t_color = get_color(flavor: flavor, color: text_color)
+  let f_color = get_color(flavor: flavor, color: fill_color)
+
+  "   " + box(
+    fill: f_color,
+    outset: 4pt,
+    radius: 10pt,
+    if show_icon { fa-icon(icon, fill: t_color, size: 7pt, solid: solid_icon)} + " " + text(t_color, content, weight: "bold"),
+  )
+}
 
 
 #let code(font: "Cascadia Code", text_color: black, content) = text(font: font, fill: text_color, content)

@@ -37,6 +37,7 @@ To use this template, copy the `template.typ` file in your directory and simply 
   lang: "fr",                      
   font: "Nunito",
   font_code: "Cascadia Code",
+  show_bib: true,
   bib_file: "Bibliography.bib",
   ... Add your arg if needed / Rajoutez vos arguments ici au besoin
 )
@@ -46,7 +47,7 @@ The current arguments you can add are the following / Les arguments possibles qu
 
 - *title* : Document title / Titre du document
 - *school* : School or company / Ecole ou structure
-- *page_paper* : The document paper format / Format de la page (A4, A3 ...)
+- *page_paper* : The document paper format / Format de la page (A4, A3, ...)
 - *landscape* : Boolean to choose a landscape format / Booléen pour choisir le format paysage ou portrait
 - *margin* : Document margin / Marges du document
 - *space_title* : Space between the header and the title / Espace entre l'en-tête et le titre
@@ -60,7 +61,31 @@ The current arguments you can add are the following / Les arguments possibles qu
 - *font_size* : Font size / Taille de la police dans le document
 - *spacing* : Spacing between lines / Espacement entre les lignes
 - *include_title_in_zone* : Boolean to include the title in its own zone / Booléen pour inclure le titre dans une zone à part
-- *show_table_of_content* : Boolean to show the table of contents / Booléen pour afficher ou non le sommaire
-- *show_bib* : Boolean to show the bibliography / Booléen pour afficher ou non la bibliographie
+- *show_table_of_content* : Boolean to show the table of content / Booléen pour afficher ou non le sommaire
+- *show_bib* : Boolean to show the biliography / Booléen pour afficher ou non la bibliographie
 - *show_header* : Boolean to show the document header / Booléen pour afficher ou non le bandeau d'en-tête
 - *bib_file* : The name of the .bib file / Nom du fichier .bib
+- *theme* : Catppuccin Flavor selected and the colors / Palette de couleur choisie pour Catppuccin
+
+
+### Dark Theme
+
+You can also switch to the Catppuccin Mocha theme with th following parameters / Vous pouvez aussi changer le thème Catppuccin en passant de latte à mocha avec les paramètres suivants (et en ajoutant le paramètre thème dans template) :
+
+```typ
+#let flavor = "mocha"
+
+#let colors = get-flavor(flavor).colors
+
+#let note = note.with(flavor: flavor)
+#let skill = skill.with(flavor: flavor)
+#let tip = tip.with(flavor: flavor)
+#let comment = comment.with(flavor: flavor)
+#let important = important.with(flavor: flavor)
+#let warning = warning.with(flavor: flavor)
+
+#show: template.with(
+  ... Your args / Vos arguments,
+  theme: (flavor: flavor),
+)
+```
